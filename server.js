@@ -2,6 +2,7 @@ var express = require("express");
 var cheerio = require("cheerio");
 const Nightmare = require("nightmare");
 const mongoose = require("mongoose");
+const path = require("path");
 const dotenv = require("dotenv");
 const cors = require("cors");
 const FoodItem = require("./models/foodItem");
@@ -25,10 +26,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
 
-app.use(express.static(path.join(__dirname, 'build')));
+app.use(express.static(path.join(__dirname, 'client/build')));
 
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
 });
 
 
