@@ -3,4 +3,5 @@
 Demo: https://labelblind-webscraper.netlify.app/
 
 - This application performs web scraping using NodeJs, libraries Nightmare, Cheerio and stores the scraped data into MongoDB Atlas.
-- Used 
+- Chose JioMart https://www.jiomart.com/c/groceries/2 to perform scraping
+
