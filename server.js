@@ -14,7 +14,7 @@ const nightmare = Nightmare({
   pollInterval: 5, //in ms
 });
 const url =
-  "https://www.flipkart.com/grocery/staples/ghee-oils/pr?sid=73z,bpe,4wu&marketplace=GROCERY";
+  "https://www.amazon.in";
 let categories;
 var app = express();
 
@@ -103,7 +103,7 @@ app.use(cors());
 // });
 app.get("/scrape/:searchInput", function (req, res) {
   axios
-    .get(`https://www.amazon.in/s?k=${req.params.searchInput}`)
+    .get(url+`/s?k=${req.params.searchInput}`)
     .then(function (response) {
       const $ = cheerio.load(response.data);
       products = [];
@@ -123,7 +123,7 @@ app.get("/scrape/:searchInput", function (req, res) {
           products[i] &&
             products[i].slice(0, 5) !== "https" &&
             axios
-              .get("https://www.amazon.in" + products[i])
+              .get(url + products[i])
               .then((response) => {
                 const $ = cheerio.load(response.data);
                 const name = $("body")
