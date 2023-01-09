@@ -1,3 +1,14 @@
 * {
   box-sizing: border-box;
 }
+
+.result{
+  width: 1000px;
+  margin: 40px;
+  border: 2px solid grey;
+  padding: 20px;
+  overflow-y: scroll;
+}
+.try-again{
+  margin:0px
+}

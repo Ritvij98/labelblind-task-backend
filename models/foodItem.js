@@ -5,12 +5,12 @@ const ProdSchema = new mongoose.Schema(
     name: { type: String},
     link:{ type: String },
     size: {type: Number},
-    price: { type: Number },
+    price: { type: String },
     ingredients: [{ type: String }],
     nutritionInfo: [{ type: String }],
-    description: { type: String },
+    description: [{ type: String }],
     imgUrls: [{ type: String }],
-    veg: [{ type: Boolean}]
+    veg: { type: String }
 
   },
   { timestamps: true }
