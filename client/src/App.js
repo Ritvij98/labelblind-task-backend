@@ -11,7 +11,7 @@ export default function App() {
 
   // useEffect(() => {
   //   axios
-  //     .get("http://localhost:3000/categories")
+  //     .get("https://labelblind-webscraper-374108.el.r.appspot.com/categories")
   //     .then((res) => {
   //       setcategoryData(res.data);
   //     })
@@ -23,7 +23,7 @@ export default function App() {
   const handleClick = () => {
     setLoadState(1);
     axios
-      .get(`http://localhost:3000/scrape/${searchInput}`)
+      .get(`https://labelblind-webscraper-374108.el.r.appspot.com/scrape/${searchInput}`)
       .then((res) => {
         setScrapeResult(res.data);
         alert("Food Item Details stored in database successfully.");
