@@ -1,4 +1,4 @@
-Simple Web Scraper
+# Simple Web Scraper
 
 Demo: https://labelblind-webscraper-374108.el.r.appspot.com/
 
